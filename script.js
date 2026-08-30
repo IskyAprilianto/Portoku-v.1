@@ -281,6 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const resTrack = document.getElementById('researchSliderTrack');
     const resDotsContainer = document.getElementById('researchSliderDots');
+    const resPrevBtn = document.getElementById('resPrevBtn');
+    const resNextBtn = document.getElementById('resNextBtn');
     
     if (resTrack && resDotsContainer) {
         const resSlides = Array.from(resTrack.children);
@@ -335,5 +337,23 @@ document.addEventListener('DOMContentLoaded', () => {
             updateResearchSlider(targetIndex);
             startResAutoplay(); // reset autoplay timer
         });
+
+        // Up button click (Previous)
+        if (resPrevBtn) {
+            resPrevBtn.addEventListener('click', () => {
+                let prevIndex = (resCurrentIndex - 1 + resTotalSlides) % resTotalSlides;
+                updateResearchSlider(prevIndex);
+                startResAutoplay();
+            });
+        }
+        
+        // Down button click (Next)
+        if (resNextBtn) {
+            resNextBtn.addEventListener('click', () => {
+                let nextIndex = (resCurrentIndex + 1) % resTotalSlides;
+                updateResearchSlider(nextIndex);
+                startResAutoplay();
+            });
+        }
     }
 });
