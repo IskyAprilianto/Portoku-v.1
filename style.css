@@ -656,6 +656,15 @@ img {
     overflow: hidden;
 }
 
+.project-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .project-image-placeholder::before {
     content: '';
     position: absolute;
@@ -878,6 +887,16 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+.research-chart-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
 }
 
 .research-chart-placeholder::before {
