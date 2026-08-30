@@ -144,6 +144,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentSlideIndex = 0;
         const totalSlides = slides.length;
         
+        // Autoplay variables & functions
+        let autoplayTimer = null;
+        const AUTOPLAY_DELAY = 4500; // 4.5 seconds
+
+        const startAutoplay = () => {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+                let nextIndex = (currentSlideIndex + 1) % totalSlides;
+                updateCarousel(nextIndex);
+            }, AUTOPLAY_DELAY);
+        };
+
+        const stopAutoplay = () => {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        };
+
+        const resetAutoplay = () => {
+            startAutoplay();
+        };
+        
         const updateCarousel = (index) => {
             currentSlideIndex = index;
             // Slide translation
@@ -157,7 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     dot.classList.remove('active');
                 }
             });
+
+            resetAutoplay();
         };
+
+        // Start autoplay on load
+        startAutoplay();
+
+        // Pause autoplay on mouse hover/touch to improve UX
+        track.addEventListener('mouseenter', stopAutoplay);
+        track.addEventListener('mouseleave', startAutoplay);
+        track.addEventListener('touchstart', stopAutoplay, { passive: true });
+        track.addEventListener('touchend', startAutoplay);
         
         // Next button click
         nextBtn.addEventListener('click', () => {
