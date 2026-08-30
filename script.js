@@ -56,11 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const animObserver = new IntersectionObserver((entries, observer) => {
+    const animObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                observer.unobserve(entry.target); // Stop observing once it appears
+            } else {
+                // Reset animation (text out) when scrolled out of view
+                entry.target.classList.remove('appear');
             }
         });
     }, animObserverOptions);
