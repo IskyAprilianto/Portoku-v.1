@@ -49,24 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // SCROLL ANIMATIONS (Intersection Observer)
     // ==========================================================================
-    const fadeElements = document.querySelectorAll('.fade-in');
+    const animElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .zoom-in');
     
-    const fadeObserverOptions = {
-        threshold: 0.15,
+    const animObserverOptions = {
+        threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const fadeObserver = new IntersectionObserver((entries, observer) => {
+    const animObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
                 observer.unobserve(entry.target); // Stop observing once it appears
             }
         });
-    }, fadeObserverOptions);
+    }, animObserverOptions);
 
-    fadeElements.forEach(element => {
-        fadeObserver.observe(element);
+    animElements.forEach(element => {
+        animObserver.observe(element);
     });
 
     // ==========================================================================
