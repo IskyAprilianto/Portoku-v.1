@@ -123,11 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `Pesan:\n${message}`
             );
             
-            // Generate mailto link and open it
-            const mailtoUrl = `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
-            
-            // Open user's default email client
-            window.location.href = mailtoUrl;
+            // Generate Gmail web compose URL and open in new tab
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${emailSubject}&body=${emailBody}`;
+            window.open(gmailUrl, '_blank');
             
             // Reset form
             contactForm.reset();
