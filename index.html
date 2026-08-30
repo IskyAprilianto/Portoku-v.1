@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Isky Dwi Aprilianto - IoT Engineer Fresh Graduate dari Universitas Trisakti. Berpengalaman membangun sistem IoT end-to-end.">
+    <title>Isky Dwi Aprilianto | IoT Engineer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Isky<span>.D</span><span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle menu" id="mobileNavToggle">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#projects" class="nav-link">Proyek</a></li>
+                    <li><a href="#research" class="nav-link">Penelitian</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#organization" class="nav-link">Organisasi</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content fade-in">
+                    <span class="hero-subtitle">Halo, saya</span>
+                    <h1 class="hero-title">Isky Dwi Aprilianto</h1>
+                    <h2 class="hero-role">IoT Engineer</h2>
+                    <p class="hero-description">
+                        Fresh graduate Teknik Informatika dari Universitas Trisakti yang berfokus membangun sistem IoT end-to-end. Mulai dari integrasi sensor & aktuator, komunikasi data MQTT (HiveMQ), penyimpanan cloud (MongoDB Atlas), hingga visualisasi dashboard real-time yang interaktif.
+                    </p>
+                    <div class="hero-cta">
+                        <!-- EDIT MANUAL: Ganti href dengan link file CV Anda di folder asset atau Google Drive -->
+                        <a href="#" class="btn btn-primary" target="_blank">
+                            <i data-lucide="download" class="btn-icon"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i data-lucide="mail" class="btn-icon"></i> Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="cube-container">
+                        <div class="iot-node">
+                            <div class="node-core">
+                                <i data-lucide="cpu" class="node-icon"></i>
+                            </div>
+                            <div class="node-ring pulse-1"></div>
+                            <div class="node-ring pulse-2"></div>
+                            <div class="node-data-point dp-1" data-label="MQTT"><i data-lucide="wifi"></i></div>
+                            <div class="node-data-point dp-2" data-label="Sensor"><i data-lucide="thermometer"></i></div>
+                            <div class="node-data-point dp-3" data-label="Database"><i data-lucide="database"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Section">
+                    <i data-lucide="chevron-down" class="scroll-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Tentang Saya Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Tentang Saya</h2>
+                <div class="about-grid">
+                    <div class="about-text fade-in">
+                        <p>
+                            Sebagai lulusan baru Teknik Informatika dari Universitas Trisakti, ketertarikan saya terletak di persimpangan antara perangkat keras (hardware) dan rekayasa perangkat lunak (software engineering). Saya mendedikasikan waktu saya untuk mempelajari bagaimana perangkat-perangkat fisik berkomunikasi dan mengolah data secara cerdas guna menyelesaikan masalah dunia nyata.
+                        </p>
+                        <p>
+                            Saya memiliki pengalaman langsung (hands-on experience) dalam merancang dan mengembangkan arsitektur IoT end-to-end. Keahlian praktis saya mencakup pemrograman mikrokontroler (ESP32), interfacing sensor/aktuator, protokol jaringan ringan seperti MQTT, penyimpanan data skala besar di cloud (MongoDB Atlas), serta pengembangan dashboard pemantauan berbasis web.
+                        </p>
+                        <p>
+                            Dalam tugas akhir kuliah, saya melakukan riset mendalam mengenai akurasi dan kalibrasi sensor pH pada sistem hidroponik IoT. Riset ini memperkuat pemahaman saya tentang pentingnya kestabilan pasokan daya listrik terhadap akurasi pembacaan sensor analog serta analisis data statistik untuk kompensasi pembacaan nilai sensor secara presisi.
+                        </p>
+                    </div>
+                    <div class="about-highlights fade-in">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <h3>End-to-End Dev</h3>
+                            <p>Pemrograman mikrokontroler hingga visualisasi web dashboard.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i data-lucide="git-branch"></i>
+                            </div>
+                            <h3>Riset & Analisis</h3>
+                            <p>Studi kalibrasi sensor, pengolahan data regresi linear/polinomial.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <h3>Kolaboratif</h3>
+                            <p>Berpengalaman bekerja dalam tim lintas peran di perkuliahan & program nasional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyek Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Proyek IoT</h2>
+                <p class="section-subtitle fade-in">Beberapa proyek pengembangan sistem internet of things yang telah saya selesaikan.</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image-placeholder">
+                            <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli jika foto sudah siap -->
+                            <!-- Contoh: <img src="assets/project-hydro-advanced.jpg" alt="Sistem IoT Hidroponik Lanjutan"> -->
+                            <div class="placeholder-content">
+                                <i data-lucide="activity" class="placeholder-icon"></i>
+                                <span>[Foto hardware & Diagram sistem]</span>
+                                <p class="placeholder-hint">Sistem kontrol dosing & sensor parameter air</p>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <span class="project-badge badge-primary">Riset Kampus</span>
+                                <span class="project-date">Mar 2026 – Sep 2026</span>
+                            </div>
+                            <h3 class="project-title">Program Pendanaan Riset Kampus — IoT Engineer</h3>
+                            <p class="project-description">
+                                Mengembangkan sistem kendali otomatis penuh untuk hidroponik lanjutan. Memasang 4 sensor parameter air & udara serta merancang logika kontrol dosing otomatis untuk menstabilkan kondisi nutrisi tanaman. Menggunakan AI-assisted dev tools untuk mempercepat pengujian alur data end-to-end.
+                            </p>
+                            <ul class="project-features">
+                                <li>Integrasi Sensor: pH, TDS, suhu air, dan DHT (suhu & kelembapan udara)</li>
+                                <li>Kontrol Dosing: 4 pompa dosing otomatis (pH Up, pH Down, Nutrisi A, Nutrisi B)</li>
+                                <li>Fitur Unggulan: Logika otomatisasi parameter & dashboard verifikasi alur data</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">C++ / Arduino IDE</span>
+                                <span class="tech-tag">MQTT</span>
+                                <span class="tech-tag">AI Dev Tools</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image-placeholder">
+                            <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli -->
+                            <div class="placeholder-content">
+                                <i data-lucide="layout" class="placeholder-icon"></i>
+                                <span>[Screenshot dashboard & Foto alat]</span>
+                                <p class="placeholder-hint">Monitoring web monitoring pH & dosing</p>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <span class="project-badge badge-secondary">Capstone Project</span>
+                                <span class="project-date">Jul 2025 – Des 2025</span>
+                            </div>
+                            <h3 class="project-title">Capstone Project — Hidroponik IoT</h3>
+                            <p class="project-description">
+                                Proyek kelompok akhir studi yang memfokuskan pada pemantauan dan stabilisasi tingkat keasaman larutan air hidroponik. Berperan utama di divisi IoT hardware untuk kalibrasi sensor, pengkabelan, dan pemrograman ESP32.
+                            </p>
+                            <ul class="project-features">
+                                <li>Integrasi sensor pH analog dengan proteksi noise pembacaan</li>
+                                <li>Kontrol pompa dosing pH dengan relay & feedback loop real-time</li>
+                                <li>Transmisi data ke platform web monitoring berkala</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">Sensor pH</span>
+                                <span class="tech-tag">HTTP API</span>
+                                <span class="tech-tag">Web Dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-in">
+                        <div class="project-image-placeholder">
+                            <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli -->
+                            <div class="placeholder-content">
+                                <i data-lucide="sun-snow" class="placeholder-icon"></i>
+                                <span>[Diagram arsitektur & Streamlit Dashboard]</span>
+                                <p class="placeholder-hint">Koneksi HiveMQ MQTT & MongoDB</p>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <span class="project-badge badge-accent">Samsung Innovation Camp</span>
+                                <span class="project-date">Des 2024 – Apr 2025</span>
+                            </div>
+                            <h3 class="project-title">Samsung Innovation Camp (SIC) — "Canopya"</h3>
+                            <p class="project-description">
+                                Berkolaborasi dalam tim merancang sistem atap pintar otomatis untuk merespons suhu ekstrim secara real-time. Memanfaatkan broker MQTT cloud untuk pengiriman pesan cepat dan database MongoDB Atlas untuk historis data.
+                            </p>
+                            <ul class="project-features">
+                                <li>Komunikasi data latensi rendah via MQTT (HiveMQ broker)</li>
+                                <li>Penyimpanan database cloud MongoDB Atlas untuk log parameter lingkungan</li>
+                                <li>Dashboard monitoring Streamlit dengan kontrol manual aktuator dari jarak jauh</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">MQTT (HiveMQ)</span>
+                                <span class="tech-tag">MongoDB Atlas</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Penelitian Tugas Akhir Section -->
+        <section id="research" class="research-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Penelitian Tugas Akhir</h2>
+                
+                <div class="research-container fade-in">
+                    <div class="research-main-info">
+                        <div class="research-header">
+                            <span class="research-badge"><i data-lucide="book-open"></i> Riset Individual</span>
+                            <span class="research-date">Jan 2026 – Jul 2026</span>
+                        </div>
+                        <h3 class="research-title">"Pengaruh Variasi Catu Daya terhadap Akurasi Kalibrasi Sensor pH pada Sistem IoT Hidroponik"</h3>
+                        <p class="research-summary-text">
+                            Penelitian ini dilatarbelakangi oleh fluktuasi pembacaan tegangan analog pada mikrokontroler ESP32 akibat penurunan performa catu daya, yang berdampak langsung pada akurasi sensor pH analog. Riset ini bertujuan mencari model kalibrasi terbaik untuk meminimalisasi deviasi akurasi tersebut.
+                        </p>
+                        
+                        <div class="research-keypoints">
+                            <div class="keypoint-item">
+                                <div class="keypoint-num">01</div>
+                                <div>
+                                    <h4>Metode Pengujian Tegangan</h4>
+                                    <p>Menguji pengaruh variasi tegangan 5.0V hingga 3.8V pada dua tipe sensor pH analog populer: 4502C dan DFRobot V2.</p>
+                                </div>
+                            </div>
+                            <div class="keypoint-item">
+                                <div class="keypoint-num">02</div>
+                                <div>
+                                    <h4>Analisis Kurva Kalibrasi</h4>
+                                    <p>Membandingkan model regresi linear biasa dengan regresi polinomial orde 2 menggunakan 7 titik cairan buffer pH dan 30 kali pengulangan per titik.</p>
+                                </div>
+                            </div>
+                            <div class="keypoint-item">
+                                <div class="keypoint-num">03</div>
+                                <div>
+                                    <h4>Hasil Optimalisasi</h4>
+                                    <p>Penerapan regresi polinomial orde 2 terbukti mampu menekan error pembacaan sensor hingga 75.3% pada kondisi tegangan tidak stabil.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="research-links">
+                            <!-- EDIT MANUAL: Ganti href dengan link file PDF jurnal/tugas akhir Anda jika sudah ada -->
+                            <a href="#" class="btn btn-secondary btn-sm" target="_blank">
+                                <i data-lucide="file-text" class="btn-icon"></i> Baca Jurnal (PDF)
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="research-visual">
+                        <div class="research-chart-placeholder">
+                            <!-- EDIT MANUAL: Ganti placeholder ini dengan gambar chart visualisasi regresi -->
+                            <div class="placeholder-content">
+                                <i data-lucide="line-chart" class="placeholder-icon"></i>
+                                <span>[Grafik Perbandingan Kalibrasi]</span>
+                                <p class="placeholder-hint">Kurva Regresi Linear vs Polinomial Orde 2 pada Tegangan 3.8V-5.0V</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Tech Stack & Tools</h2>
+                <p class="section-subtitle fade-in">Teknologi, perangkat keras, protokol, dan alat bantu pengembangan yang biasa saya gunakan.</p>
+                
+                <div class="skills-grid fade-in">
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i data-lucide="cpu" class="category-icon"></i>
+                            <h3>Hardware & Embedded</h3>
+                        </div>
+                        <div class="skill-badges-container">
+                            <span class="skill-badge-lg">ESP32</span>
+                            <span class="skill-badge-lg">ESP8266</span>
+                            <span class="skill-badge-lg">Arduino Uno</span>
+                            <span class="skill-badge-lg">C++ / Arduino IDE</span>
+                            <span class="skill-badge-lg">Sensor Interfacing (Analog/I2C/OneWire)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i data-lucide="network" class="category-icon"></i>
+                            <h3>Protokol & Konektivitas</h3>
+                        </div>
+                        <div class="skill-badges-container">
+                            <span class="skill-badge-lg">MQTT (HiveMQ)</span>
+                            <span class="skill-badge-lg">HTTP REST API</span>
+                            <span class="skill-badge-lg">WebSockets</span>
+                            <span class="skill-badge-lg">Wi-Fi (IEEE 802.11)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i data-lucide="database" class="category-icon"></i>
+                            <h3>Database & Cloud</h3>
+                        </div>
+                        <div class="skill-badges-container">
+                            <span class="skill-badge-lg">MongoDB Atlas</span>
+                            <span class="skill-badge-lg">Firebase RTDB</span>
+                            <span class="skill-badge-lg">JSON Data Format</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i data-lucide="layout-template" class="category-icon"></i>
+                            <h3>Dashboard & Design</h3>
+                        </div>
+                        <div class="skill-badges-container">
+                            <span class="skill-badge-lg">Streamlit</span>
+                            <span class="skill-badge-lg">HTML5 & CSS3</span>
+                            <span class="skill-badge-lg">Figma</span>
+                            <span class="skill-badge-lg">VSCode</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengalaman Organisasi Section -->
+        <section id="organization" class="org-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Pengalaman Organisasi & Kegiatan</h2>
+                
+                <div class="timeline fade-in">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2025 - 2026</span>
+                            <h3 class="timeline-title">Asisten Lab Keamanan Informasi</h3>
+                            <span class="timeline-org">Fakultas Teknologi Industri, Universitas Trisakti</span>
+                            <p class="timeline-desc">Membimbing praktikan dalam memahami dasar keamanan jaringan, kriptografi praktis, dan melakukan setup lab lingkungan pengujian keamanan.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2025</span>
+                            <h3 class="timeline-title">Bebras Biro Trisakti</h3>
+                            <span class="timeline-org">Staf Kegiatan Pengenalan Computational Thinking</span>
+                            <p class="timeline-desc">Membantu penyelenggaraan tantangan Bebras untuk memperkenalkan cara berpikir komputasional kepada siswa sekolah dasar hingga menengah.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 - 2025</span>
+                            <h3 class="timeline-title">Staf Hubungan Masyarakat</h3>
+                            <span class="timeline-org">BEM FTI Universitas Trisakti</span>
+                            <p class="timeline-desc">Menjadi jembatan komunikasi antara mahasiswa dengan birokrasi fakultas serta mengelola publikasi media informasi resmi BEM.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024</span>
+                            <h3 class="timeline-title">Panitia Penyelenggara</h3>
+                            <span class="timeline-org">Webinar Smart Rest Area EXPO 2024</span>
+                            <p class="timeline-desc">Mengoordinasikan kelancaran teknis acara webinar nasional bertema implementasi IoT dan Smart Infrastructure pada area peristirahatan jalan tol.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Hubungi Saya</h2>
+                <p class="section-subtitle fade-in">Tertarik untuk berkolaborasi atau mendiskusikan peluang kerja? Kirimkan pesan Anda!</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-column fade-in">
+                        <div class="contact-card-modern">
+                            <h3>Informasi Kontak</h3>
+                            <p>Silakan hubungi saya melalui saluran berikut untuk respon yang lebih cepat.</p>
+                            
+                            <div class="contact-details">
+                                <!-- EDIT MANUAL: Silakan ubah data kontak di bawah ini sesuai informasi asli Anda -->
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i data-lucide="mail"></i></div>
+                                    <div class="detail-text">
+                                        <span>Email</span>
+                                        <!-- EDIT MANUAL: Masukkan email Anda -->
+                                        <a href="mailto:iskydwiaprilianto@example.com">iskydwiaprilianto@example.com</a>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i data-lucide="linkedin"></i></div>
+                                    <div class="detail-text">
+                                        <span>LinkedIn</span>
+                                        <!-- EDIT MANUAL: Masukkan link LinkedIn Anda -->
+                                        <a href="https://linkedin.com/in/isky-dwi-aprilianto" target="_blank">linkedin.com/in/isky-dwi-aprilianto</a>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i data-lucide="github"></i></div>
+                                    <div class="detail-text">
+                                        <span>GitHub</span>
+                                        <!-- EDIT MANUAL: Masukkan link GitHub Anda -->
+                                        <a href="https://github.com/iskydwi" target="_blank">github.com/iskydwi</a>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon"><i data-lucide="phone"></i></div>
+                                    <div class="detail-text">
+                                        <span>Telepon / WhatsApp</span>
+                                        <!-- EDIT MANUAL: Masukkan nomor telepon Anda -->
+                                        <a href="tel:+628123456789">+62 812-3456-789</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-column fade-in">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" required placeholder="Masukkan nama Anda">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" required placeholder="Masukkan email Anda">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <input type="text" id="subject" required placeholder="Apa topik pesan Anda?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" rows="5" required placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i data-lucide="send" class="btn-icon"></i> Kirim Pesan via Email
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Isky Dwi Aprilianto. All Rights Reserved.</p>
+            <p class="footer-credit">Built with <i data-lucide="heart" class="heart-icon"></i> for IoT Engineering</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
