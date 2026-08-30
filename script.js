@@ -116,12 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const recipient = 'iskydwi.aprilianto442@gmail.com';
             
-            const emailSubject = encodeURIComponent(`[Portofolio Kontak] ${subject}`);
-            const emailBody = encodeURIComponent(
-                `Nama Pengirim: ${name}\n` +
-                `Email Pengirim: ${email}\n\n` +
-                `Pesan:\n${message}`
-            );
+            const emailSubject = encodeURIComponent(subject);
+            const emailBody = encodeURIComponent(message);
             
             // Generate Gmail web compose URL and open in new tab
             const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${emailSubject}&body=${emailBody}`;
