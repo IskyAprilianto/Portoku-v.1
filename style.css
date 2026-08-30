@@ -1450,6 +1450,45 @@ img {
 }
 
 /* ==========================================================================
+   STAGGERED SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+/* Stagger delays for grid-based items */
+.projects-grid .project-card:nth-child(1) { transition-delay: 0.1s; }
+.projects-grid .project-card:nth-child(2) { transition-delay: 0.25s; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 0.4s; }
+
+.skills-grid .skill-category-card:nth-child(1) { transition-delay: 0.1s; }
+.skills-grid .skill-category-card:nth-child(2) { transition-delay: 0.2s; }
+.skills-grid .skill-category-card:nth-child(3) { transition-delay: 0.3s; }
+.skills-grid .skill-category-card:nth-child(4) { transition-delay: 0.4s; }
+
+.timeline .timeline-item:nth-child(1) { transition-delay: 0.1s; }
+.timeline .timeline-item:nth-child(2) { transition-delay: 0.25s; }
+.timeline .timeline-item:nth-child(3) { transition-delay: 0.4s; }
+.timeline .timeline-item:nth-child(4) { transition-delay: 0.55s; }
+
+/* Micro-interaction & Hover state enhancements */
+.project-card, .skill-category-card, .timeline-content, .highlight-card, .carousel-btn, .dot {
+    transition: var(--transition-bounce);
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px -15px rgba(20, 184, 166, 0.25);
+}
+
+.skill-category-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 30px -10px rgba(20, 184, 166, 0.2);
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    border-color: var(--accent);
+}
+
+
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 
