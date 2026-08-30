@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const updateResearchSlider = (index) => {
             resCurrentIndex = index;
-            resTrack.style.transform = `translateX(-${resCurrentIndex * 100}%)`;
+            resTrack.style.transform = `rotateX(${resCurrentIndex * 90}deg)`;
             
             resDots.forEach((dot, idx) => {
                 if (idx === resCurrentIndex) {
