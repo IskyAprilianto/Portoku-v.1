@@ -114,9 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('subject').value.trim();
             const message = document.getElementById('message').value.trim();
             
-            // Set up mailto parameters
-            // EDIT MANUAL: Ubah email penerima di sini jika ingin diarahkan ke email yang berbeda
-            const recipient = 'iskydwiaprilianto@example.com';
+            const recipient = 'iskydwi.aprilianto442@gmail.com';
             
             const emailSubject = encodeURIComponent(`[Portofolio Kontak] ${subject}`);
             const emailBody = encodeURIComponent(
