@@ -560,6 +560,7 @@ img {
     margin-bottom: 20px;
     color: var(--text-secondary);
     font-size: 1.05rem;
+    text-align: justify;
 }
 
 .about-highlights {
@@ -818,6 +819,7 @@ img {
     color: var(--text-secondary);
     font-size: 1rem;
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .research-keypoints {
