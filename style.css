@@ -1225,6 +1225,230 @@ img {
 }
 
 /* ==========================================================================
+   GALERI / CAROUSEL SECTION
+   ========================================================================== */
+.gallery-section {
+    background-color: var(--bg-secondary);
+}
+
+.carousel-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-image-container {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #1b263b 0%, #080e1a 100%);
+    position: relative;
+}
+
+.slide-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-placeholder-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.slide-placeholder-bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    background-size: 24px 24px;
+    background-image: linear-gradient(to right, var(--text-muted) 1px, transparent 1px),
+                      linear-gradient(to bottom, var(--text-muted) 1px, transparent 1px);
+}
+
+.slide-placeholder-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    opacity: 0.8;
+}
+
+.slide-placeholder-bg span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.slide-placeholder-bg p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    max-width: 450px;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(8, 14, 26, 0.95) 0%, rgba(8, 14, 26, 0.8) 70%, rgba(8, 14, 26, 0) 100%);
+    padding: 35px 40px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.slide-caption h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    margin-bottom: 6px;
+}
+
+.slide-caption p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Controls */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-bounce);
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+.carousel-btn:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.dot:hover,
+.dot.active {
+    background-color: var(--accent);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustment for Carousel */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 380px;
+    }
+    .slide-caption {
+        padding: 20px 24px 20px;
+    }
+    .slide-caption h3 {
+        font-size: 1.15rem;
+    }
+    .slide-caption p {
+        font-size: 0.85rem;
+    }
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+    }
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 320px;
+    }
+    .slide-placeholder-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+    .slide-placeholder-bg span {
+        font-size: 0.9rem;
+    }
+    .slide-placeholder-bg p {
+        font-size: 0.75rem;
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 

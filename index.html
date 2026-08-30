@@ -36,6 +36,7 @@
                     <li><a href="#about" class="nav-link">Tentang</a></li>
                     <li><a href="#projects" class="nav-link">Proyek</a></li>
                     <li><a href="#research" class="nav-link">Penelitian</a></li>
+                    <li><a href="#gallery" class="nav-link">Galeri</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#organization" class="nav-link">Organisasi</a></li>
                     <li><a href="#contact" class="nav-link">Kontak</a></li>
@@ -292,6 +293,103 @@
                                 <p class="placeholder-hint">Kurva Regresi Linear vs Polinomial Orde 2 pada Tegangan 3.8V-5.0V</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Riset & Proyek (Carousel) -->
+        <section id="gallery" class="gallery-section section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">Galeri Riset & Progress</h2>
+                <p class="section-subtitle fade-in">Dokumentasi visual proses perancangan, kalibrasi hardware, pengujian alur data, hingga hasil akhir proyek IoT.</p>
+                
+                <div class="carousel-wrapper fade-in">
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="carouselTrack">
+                            
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image-container">
+                                    <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli jika foto sudah siap -->
+                                    <!-- Contoh: <img src="assets/riset-kalibrasi.jpg" alt="Kalibrasi Sensor pH"> -->
+                                    <div class="slide-placeholder-bg">
+                                        <i data-lucide="microscope" class="slide-placeholder-icon"></i>
+                                        <span>[Foto Pengujian Kalibrasi pH]</span>
+                                        <p>Riset pH meter 4502C & DFRobot V2 di bawah tegangan catu daya 3.8V - 5.0V</p>
+                                    </div>
+                                </div>
+                                <div class="slide-caption">
+                                    <h3>Kalibrasi Akurasi Sensor pH</h3>
+                                    <p>Proses pembacaan 7 larutan buffer pH untuk mencari data kompensasi regresi polinomial orde 2.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image-container">
+                                    <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli jika foto sudah siap -->
+                                    <div class="slide-placeholder-bg">
+                                        <i data-lucide="wrench" class="slide-placeholder-icon"></i>
+                                        <span>[Foto Wiring & Hardware ESP32]</span>
+                                        <p>Instalasi sirkuit pengkabelan sensor & 4 pompa dosing otomatis</p>
+                                    </div>
+                                </div>
+                                <div class="slide-caption">
+                                    <h3>Integrasi Hardware & Sensor</h3>
+                                    <p>Perakitan modul ESP32, relay board, motor pompa peristaltik, dan pelindung noise elektrik pada sensor analog.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image-container">
+                                    <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli jika foto sudah siap -->
+                                    <div class="slide-placeholder-bg">
+                                        <i data-lucide="terminal" class="slide-placeholder-icon"></i>
+                                        <span>[Screenshot Testing MQTT & DB]</span>
+                                        <p>Monitoring log pesan data JSON di MQTT HiveMQ Console & MongoDB Atlas</p>
+                                    </div>
+                                </div>
+                                <div class="slide-caption">
+                                    <h3>Pengujian Konektivitas Data</h3>
+                                    <p>Verifikasi pengiriman data sensor real-time via broker MQTT dan pencatatan riwayat sensor ke database cloud.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image-container">
+                                    <!-- EDIT MANUAL: Ganti placeholder ini dengan tag <img> asli jika foto sudah siap -->
+                                    <div class="slide-placeholder-bg">
+                                        <i data-lucide="monitor" class="slide-placeholder-icon"></i>
+                                        <span>[Screenshot Web Dashboard]</span>
+                                        <p>Tampilan grafik visualisasi real-time parameter suhu, pH, dan TDS air</p>
+                                    </div>
+                                </div>
+                                <div class="slide-caption">
+                                    <h3>Dashboard Monitoring Real-Time</h3>
+                                    <p>Antarmuka pengguna interaktif untuk verifikasi data hidroponik dan penyetelan manual pompa aktuator dosing.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Slide">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Slide">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Indicators/Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
                     </div>
                 </div>
             </div>

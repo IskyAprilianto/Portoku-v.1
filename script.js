@@ -135,4 +135,116 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
         });
     }
+
+    // ==========================================================================
+    // CAROUSEL GALLERY LOGIC
+    // ==========================================================================
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if (track && prevBtn && nextBtn && dotsContainer) {
+        const slides = Array.from(track.children);
+        const dots = Array.from(dotsContainer.children);
+        let currentSlideIndex = 0;
+        const totalSlides = slides.length;
+        
+        const updateCarousel = (index) => {
+            currentSlideIndex = index;
+            // Slide translation
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, idx) => {
+                if (idx === currentSlideIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+        
+        // Next button click
+        nextBtn.addEventListener('click', () => {
+            let nextIndex = (currentSlideIndex + 1) % totalSlides;
+            updateCarousel(nextIndex);
+        });
+        
+        // Prev button click
+        prevBtn.addEventListener('click', () => {
+            let prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel(prevIndex);
+        });
+        
+        // Dots navigation
+        dotsContainer.addEventListener('click', (e) => {
+            const targetDot = e.target.closest('.dot');
+            if (!targetDot) return;
+            
+            const targetIndex = parseInt(targetDot.getAttribute('data-index'), 10);
+            updateCarousel(targetIndex);
+        });
+        
+        // Touch / Swipe Support
+        let startX = 0;
+        let isDragging = false;
+        
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        }, { passive: true });
+        
+        track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const diffX = e.touches[0].clientX - startX;
+            
+            // Threshold for swiping
+            if (Math.abs(diffX) > 60) {
+                if (diffX > 0) {
+                    // Swipe right -> Prev
+                    let prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel(prevIndex);
+                } else {
+                    // Swipe left -> Next
+                    let nextIndex = (currentSlideIndex + 1) % totalSlides;
+                    updateCarousel(nextIndex);
+                }
+                isDragging = false;
+            }
+        }, { passive: true });
+        
+        track.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Mouse Drag Support for Desktop
+        let mouseStartX = 0;
+        let isMouseDragging = false;
+
+        track.addEventListener('mousedown', (e) => {
+            mouseStartX = e.clientX;
+            isMouseDragging = true;
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isMouseDragging) return;
+            const diffX = e.clientX - mouseStartX;
+
+            if (Math.abs(diffX) > 80) {
+                if (diffX > 0) {
+                    let prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel(prevIndex);
+                } else {
+                    let nextIndex = (currentSlideIndex + 1) % totalSlides;
+                    updateCarousel(nextIndex);
+                }
+                isMouseDragging = false;
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            isMouseDragging = false;
+        });
+    }
 });
