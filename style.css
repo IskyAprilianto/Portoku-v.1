@@ -1347,3 +1347,22 @@ img {
         padding: 24px;
     }
 }
+
+@media (max-width: 350px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+    .hero-title {
+        font-size: 2.1rem;
+    }
+    .hero-role {
+        font-size: 1.25rem;
+    }
+    .project-body, .timeline-content, .contact-card-modern, .contact-form {
+        padding: 16px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+}
+
