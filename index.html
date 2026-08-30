@@ -282,18 +282,35 @@
                     </div>
                     
                     <div class="research-visual slide-in-right">
-                        <div class="research-charts-container">
-                            <div class="research-chart-card">
-                                <img src="dokumentasi/Grafik Perbandingan Kalibrasi.svg" alt="Perbandingan Hasil Kalibrasi">
-                                <span class="chart-label">Grafik 1: Regresi Linier vs Polinomial</span>
+                        <div class="research-slider-container">
+                            <div class="research-slider-track" id="researchSliderTrack">
+                                <!-- Slide 1 -->
+                                <div class="research-slide">
+                                    <div class="research-chart-placeholder">
+                                        <img src="dokumentasi/Grafik Perbandingan Kalibrasi.svg" alt="Grafik Perbandingan Kalibrasi - Regresi Linier vs Polinomial">
+                                    </div>
+                                    <span class="research-slide-caption">Grafik 1: Perbandingan Akurasi (Regresi Linier vs Polinomial)</span>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="research-slide">
+                                    <div class="research-chart-placeholder">
+                                        <img src="dokumentasi/Grafik4502C.svg" alt="Grafik Pengujian Sensor pH 4502C">
+                                    </div>
+                                    <span class="research-slide-caption">Grafik 2: Uji Akurasi Sensor pH 4502C pada Variasi Catu Daya</span>
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="research-slide">
+                                    <div class="research-chart-placeholder">
+                                        <img src="dokumentasi/GrafikDFRobot.svg" alt="Grafik Pengujian Sensor pH DFRobot V2">
+                                    </div>
+                                    <span class="research-slide-caption">Grafik 3: Uji Akurasi Sensor pH DFRobot V2 pada Variasi Catu Daya</span>
+                                </div>
                             </div>
-                            <div class="research-chart-card">
-                                <img src="dokumentasi/Grafik4502C.svg" alt="Uji Akurasi Sensor pH 4502C">
-                                <span class="chart-label">Grafik 2: Uji Sensor pH 4502C</span>
-                            </div>
-                            <div class="research-chart-card">
-                                <img src="dokumentasi/GrafikDFRobot.svg" alt="Uji Akurasi Sensor pH DFRobot V2">
-                                <span class="chart-label">Grafik 3: Uji Sensor pH DFRobot V2</span>
+                            <!-- Mini dots indicators -->
+                            <div class="research-slider-dots" id="researchSliderDots">
+                                <span class="research-dot active" data-index="0"></span>
+                                <span class="research-dot" data-index="1"></span>
+                                <span class="research-dot" data-index="2"></span>
                             </div>
                         </div>
                     </div>

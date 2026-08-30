@@ -970,64 +970,89 @@ img {
     gap: 16px;
 }
 
-.research-charts-container {
-    background: rgba(30, 41, 59, 0.25);
-    border: 1px solid var(--border-color);
+.research-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     border-radius: 16px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-height: 480px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent) transparent;
-}
-
-/* Custom scrollbar for Webkit */
-.research-charts-container::-webkit-scrollbar {
-    width: 6px;
-}
-
-.research-charts-container::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.research-charts-container::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
-    border-radius: 20px;
-}
-
-.research-chart-card {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(30, 41, 59, 0.3);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 16px;
+    padding: 20px 20px 45px 20px;
+}
+
+.research-slider-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+}
+
+.research-slide {
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: var(--transition-bounce);
 }
 
-.research-chart-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 20px -10px rgba(20, 184, 166, 0.15);
-}
-
-.research-chart-card img {
+.research-chart-placeholder {
     width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: contain;
+    height: 330px;
+    background: radial-gradient(circle at center, #1b263b 0%, #080e1a 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.chart-label {
-    margin-top: 12px;
-    font-size: 0.82rem;
+.research-chart-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+}
+
+.research-slide-caption {
+    margin-top: 15px;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     font-family: var(--font-heading);
     font-weight: 500;
+    text-align: center;
+}
+
+.research-slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.research-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.research-dot.active {
+    background-color: var(--accent);
+    transform: scale(1.25);
+}
+
+@media (max-width: 480px) {
+    .research-chart-placeholder {
+        height: 220px;
+    }
 }
 
 .research-chart-placeholder::before {
