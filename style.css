@@ -1234,7 +1234,8 @@ img {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     color: var(--text-muted);
     font-size: 0.88rem;
