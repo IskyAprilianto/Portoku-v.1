@@ -973,6 +973,7 @@ img {
 .research-slider-container {
     position: relative;
     width: 100%;
+    height: 400px;
     overflow: hidden;
     border-radius: 16px;
     background: rgba(30, 41, 59, 0.3);
@@ -982,12 +983,15 @@ img {
 
 .research-slider-track {
     display: flex;
+    flex-direction: column;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
     width: 100%;
 }
 
 .research-slide {
-    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -995,7 +999,7 @@ img {
 
 .research-chart-placeholder {
     width: 100%;
-    height: 330px;
+    height: 280px;
     background: radial-gradient(circle at center, #1b263b 0%, #080e1a 100%);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -1017,7 +1021,7 @@ img {
 }
 
 .research-slide-caption {
-    margin-top: 15px;
+    margin-top: 12px;
     font-size: 0.85rem;
     color: var(--text-secondary);
     font-family: var(--font-heading);
@@ -1050,8 +1054,11 @@ img {
 }
 
 @media (max-width: 480px) {
+    .research-slider-container {
+        height: 330px;
+    }
     .research-chart-placeholder {
-        height: 220px;
+        height: 210px;
     }
 }
 
