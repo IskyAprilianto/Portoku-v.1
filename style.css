@@ -82,6 +82,72 @@ img {
 
 .section-padding {
     padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background Ambient Glows Styling */
+.ambient-glows {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.85;
+    will-change: transform;
+}
+
+.glow-1 {
+    top: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(8, 14, 26, 0) 70%);
+    animation: floatGlow1 28s infinite alternate ease-in-out;
+}
+
+.glow-2 {
+    bottom: -15%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, rgba(8, 14, 26, 0) 70%);
+    animation: floatGlow2 32s infinite alternate ease-in-out;
+}
+
+.glow-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, rgba(8, 14, 26, 0) 70%);
+    animation: floatGlow3 40s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(150px, 100px) scale(1.15); }
+}
+
+@keyframes floatGlow2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-120px, -150px) scale(0.9); }
+}
+
+@keyframes floatGlow3 {
+    0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+    50% { transform: translate(-50%, -50%) translate(100px, -80px) scale(1.08); }
+    100% { transform: translate(-50%, -50%) translate(-80px, 90px) scale(0.95); }
 }
 
 /* Section Header Styles */
@@ -570,7 +636,9 @@ img {
    TENTANG SAYA SECTION
    ========================================================================== */
 .about-section {
-    background-color: var(--bg-secondary);
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .about-grid {
@@ -641,7 +709,7 @@ img {
    PROYEK SECTION
    ========================================================================== */
 .projects-section {
-    background-color: var(--bg-primary);
+    background-color: transparent;
 }
 
 .projects-grid {
@@ -793,7 +861,9 @@ img {
    PENELITIAN TUGAS AKHIR SECTION
    ========================================================================== */
 .research-section {
-    background-color: var(--bg-secondary);
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .research-container {
@@ -938,7 +1008,7 @@ img {
    TECH STACK SECTION
    ========================================================================== */
 .skills-section {
-    background-color: var(--bg-primary);
+    background-color: transparent;
 }
 
 .skills-grid {
@@ -1009,7 +1079,9 @@ img {
    ORGANISASI / TIMELINE SECTION
    ========================================================================== */
 .org-section {
-    background-color: var(--bg-secondary);
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .timeline {
@@ -1101,7 +1173,7 @@ img {
    KONTAK SECTION
    ========================================================================== */
 .contact-section {
-    background-color: var(--bg-primary);
+    background-color: transparent;
 }
 
 .contact-grid {
