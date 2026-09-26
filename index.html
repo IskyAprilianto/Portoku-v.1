@@ -147,11 +147,25 @@
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-card zoom-in">
-                        <div class="project-image-placeholder">
-                            <div class="placeholder-content">
+                        <div class="project-image-placeholder" style="position:relative; overflow:hidden;">
+                            <!-- On Progress Overlay Badge -->
+                            <div class="on-progress-overlay">
                                 <i data-lucide="loader-2" class="placeholder-icon" style="animation: spin 3s linear infinite;"></i>
                                 <span>[Proyek Berjalan / On Progress]</span>
-                                <p class="placeholder-hint">Hardware & sistem dalam tahap riset dan pengembangan</p>
+                                <p class="placeholder-hint">Hardware &amp; sistem dalam tahap riset dan pengembangan</p>
+                            </div>
+                            <!-- Mini Image Slider -->
+                            <div class="proj-slider" id="projSlider1">
+                                <div class="proj-slides" id="projSlides1">
+                                    <div class="proj-slide"><img src="dokumentasi/Gambar8.jpeg" alt="Riset Kampus - Gambar 1"></div>
+                                    <div class="proj-slide"><img src="dokumentasi/Gambar9.jpeg" alt="Riset Kampus - Gambar 2"></div>
+                                </div>
+                                <button class="proj-slide-btn proj-prev" onclick="moveSlide('projSlides1','projDots1',-1)" aria-label="Previous">&#8249;</button>
+                                <button class="proj-slide-btn proj-next" onclick="moveSlide('projSlides1','projDots1',1)" aria-label="Next">&#8250;</button>
+                                <div class="proj-dots" id="projDots1">
+                                    <span class="proj-dot active" onclick="goSlide('projSlides1','projDots1',0)"></span>
+                                    <span class="proj-dot" onclick="goSlide('projSlides1','projDots1',1)"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="project-body">
