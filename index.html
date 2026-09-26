@@ -147,25 +147,36 @@
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-card zoom-in">
-                        <div class="project-image-placeholder" style="position:relative; overflow:hidden;">
-                            <!-- On Progress Overlay Badge -->
-                            <div class="on-progress-overlay">
-                                <i data-lucide="loader-2" class="placeholder-icon" style="animation: spin 3s linear infinite;"></i>
-                                <span>[Proyek Berjalan / On Progress]</span>
-                                <p class="placeholder-hint">Hardware &amp; sistem dalam tahap riset dan pengembangan</p>
+                        <!-- Horizontal Image Slider -->
+                        <div class="proj-slider-container">
+                            <!-- On Progress Badge -->
+                            <div class="on-progress-badge">
+                                <i data-lucide="loader-2" class="badge-spin-icon"></i>
+                                <span>On Progress</span>
                             </div>
-                            <!-- Mini Image Slider -->
-                            <div class="proj-slider" id="projSlider1">
-                                <div class="proj-slides" id="projSlides1">
-                                    <div class="proj-slide"><img src="dokumentasi/Gambar8.jpeg" alt="Riset Kampus - Gambar 1"></div>
-                                    <div class="proj-slide"><img src="dokumentasi/Gambar9.jpeg" alt="Riset Kampus - Gambar 2"></div>
+
+                            <!-- Slider Track -->
+                            <div class="proj-slider-track" id="projSliderTrack1">
+                                <div class="proj-slide">
+                                    <img src="dokumentasi/Gambar8.jpeg" alt="Riset Kampus - Gambar 1">
                                 </div>
-                                <button class="proj-slide-btn proj-prev" onclick="moveSlide('projSlides1','projDots1',-1)" aria-label="Previous">&#8249;</button>
-                                <button class="proj-slide-btn proj-next" onclick="moveSlide('projSlides1','projDots1',1)" aria-label="Next">&#8250;</button>
-                                <div class="proj-dots" id="projDots1">
-                                    <span class="proj-dot active" onclick="goSlide('projSlides1','projDots1',0)"></span>
-                                    <span class="proj-dot" onclick="goSlide('projSlides1','projDots1',1)"></span>
+                                <div class="proj-slide">
+                                    <img src="dokumentasi/Gambar9.jpeg" alt="Riset Kampus - Gambar 2">
                                 </div>
+                            </div>
+
+                            <!-- Nav Buttons -->
+                            <button class="proj-nav-btn proj-nav-prev" id="projPrev1" aria-label="Previous">
+                                <i data-lucide="chevron-left"></i>
+                            </button>
+                            <button class="proj-nav-btn proj-nav-next" id="projNext1" aria-label="Next">
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+
+                            <!-- Dots -->
+                            <div class="proj-slider-dots" id="projDots1">
+                                <span class="proj-dot active" data-index="0"></span>
+                                <span class="proj-dot" data-index="1"></span>
                             </div>
                         </div>
                         <div class="project-body">

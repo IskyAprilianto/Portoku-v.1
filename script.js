@@ -356,4 +356,63 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // ==========================================================================
+    // PROJECT HORIZONTAL SLIDER LOGIC
+    // ==========================================================================
+    function initProjSlider(trackId, dotsId, prevBtnId, nextBtnId) {
+        const track    = document.getElementById(trackId);
+        const dotsWrap = document.getElementById(dotsId);
+        const prevBtn  = document.getElementById(prevBtnId);
+        const nextBtn  = document.getElementById(nextBtnId);
+        if (!track || !dotsWrap) return;
+
+        const slides     = Array.from(track.children);
+        const dots       = Array.from(dotsWrap.children);
+        const totalSlides = slides.length;
+        let current      = 0;
+        let autoTimer    = null;
+        const DELAY      = 3500;
+
+        const goTo = (index) => {
+            current = (index + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            resetAuto();
+        };
+
+        const startAuto = () => {
+            stopAuto();
+            autoTimer = setInterval(() => goTo(current + 1), DELAY);
+        };
+
+        const stopAuto  = () => { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } };
+        const resetAuto = () => startAuto();
+
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        dotsWrap.addEventListener('click', (e) => {
+            const dot = e.target.closest('.proj-dot');
+            if (!dot) return;
+            goTo(parseInt(dot.getAttribute('data-index'), 10));
+        });
+
+        // Touch swipe support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        });
+
+        // Pause autoplay on hover
+        track.addEventListener('mouseenter', stopAuto);
+        track.addEventListener('mouseleave', startAuto);
+
+        startAuto();
+    }
+
+    // Init all project sliders
+    initProjSlider('projSliderTrack1', 'projDots1', 'projPrev1', 'projNext1');
 });
